@@ -17,8 +17,8 @@ public class TransactionsPage extends InitialPage {
     @FindBy(css = "button[ng-click='reset()']")
     private WebElement resetElement;
 
-    //@FindBy(xpath = "//table[@class='table table-bordered table-striped']/tbody/tr")
-    @FindBy(xpath = "//table[@class='table table-bordered table-striped']")
+    @FindBy(xpath = "//table[@class='table table-bordered table-striped']/tbody/tr")
+    //@FindBy(xpath = "//table[@class='table table-bordered table-striped']")
     List<WebElement> transactionsList;
     @FindBy(xpath = "//td[@class='ng-binding'][2]")
     List<WebElement> amountColumnElement;

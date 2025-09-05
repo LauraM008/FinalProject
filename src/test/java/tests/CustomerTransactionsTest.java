@@ -9,7 +9,7 @@ public class CustomerTransactionsTest extends SharedData {
     @Test
     public void testMethod() {
 
-        String customerNameValue = "Hermoine Granger";
+        String customerNameValue = "Ron Weasly";
         int depositAmount = 100;
         int withdrawAmount = 50;
 

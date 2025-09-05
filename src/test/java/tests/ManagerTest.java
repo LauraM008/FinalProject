@@ -13,8 +13,8 @@ public class ManagerTest extends SharedData {
         String postCode = "060708";
         String nameValue = "Cornel Georgescu";
         String currencyValue = "Dollar";
-        int accountNumber = 1020 ;
-        int tableSize = 6;
+        int accountNumber = 1016 ;
+        int tableSize = 5;
 
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.interactWithBankManagerLoginElement();
@@ -30,7 +30,5 @@ public class ManagerTest extends SharedData {
         managerActionsPage.validateCustomerListSize(tableSize);
 
         loginPage.interactWithHomeButton();
-
     }
-
 }
