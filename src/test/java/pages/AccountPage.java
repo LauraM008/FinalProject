@@ -50,33 +50,6 @@ public class AccountPage extends InitialPage{
     @FindBy(xpath="//button[text()='Withdraw']")
     private WebElement submitWithdrawElement;
 
-
-    public void validateCustomerName(String expectedCustomerNameText){
-        elementHelper.validateElementEqualsText(customerNameTextElement, expectedCustomerNameText);
-        LoggerUtility.infoLog("The user validates the selected customer name is correctly displayed");
-    }
-
-    public void validateSelectedAccount(String expectedSelectedAccount){
-        elementHelper.validateElementEqualsText(displayedAccountNumberElement, expectedSelectedAccount);
-        LoggerUtility.infoLog("The user validates the selected account number is correctly displayed");
-    }
-
-    public void validateBalance(){
-        elementHelper.waitVisibleElement(balanceElement);
-        elementHelper.validateElementEqualsIntValue(balanceElement, balance);
-        LoggerUtility.infoLog("The user validates the balance");
-    }
-
-    public void validateCurrency(String expectedCurrency){
-        elementHelper.validateElementEqualsText(currencyElement, expectedCurrency);
-        LoggerUtility.infoLog("The user validates the currency");
-    }
-
-    public void selectCustomerAccount(String value,  Keys keyValue){
-        elementHelper.fillPressElement(selectAccountNumberElement, value, keyValue);
-        LoggerUtility.infoLog("The user selects the account number");
-    }
-
     public void interactWithTransactionButton() {
         try {
             Thread.sleep(5000);
@@ -114,12 +87,6 @@ public class AccountPage extends InitialPage{
         LoggerUtility.infoLog("The value: " + value + " was added to transactionAmountColumn list");
         transactionTypeColumn.add("Credit");
         LoggerUtility.infoLog("The value Credit was added to transactionTypeColumn list");
-    }
-
-    public void validateSuccessfulDepositWithdrawlMessage(String expectedMessage){
-        elementHelper.waitVisibleElement(successfulDepositWithdrawlMessageElement);
-        elementHelper.validateElementEqualsText(successfulDepositWithdrawlMessageElement, expectedMessage);
-        LoggerUtility.infoLog("The user validates the message displayed");
     }
 
     public void submitWithdrawlAmount(int value){

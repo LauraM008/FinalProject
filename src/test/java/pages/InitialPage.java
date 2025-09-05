@@ -38,8 +38,4 @@ public class InitialPage {
     public WebElement getHomeButtonElement() {
         return homeButtonElement;
     }
-
-    public WebElement getLogoutButtonElement() {
-        return logoutButtonElement;
-    }
 }
